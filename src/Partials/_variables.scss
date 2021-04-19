@@ -24,6 +24,10 @@
 // /Palette
 
 //Font
+    //Typo
+    $primaryFont: 'Playfair Display', serif;
+    $secondaryFont: 'Mulish', sans-serif;
+
     //Title-size
     $headingS: 21px;
     $headingM: 26px;
@@ -41,5 +45,5 @@
     //Paragraph-Weight
     $fontLight: 200;
     $fontReg: 400;
-    $fontBold: 500;
+    $fontMed: 500;
 // /Font

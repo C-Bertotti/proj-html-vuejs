@@ -1,0 +1,44 @@
+header > .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    & .header__right {
+        display: flex;
+        align-items: center;
+
+        nav {
+            margin-right: 25px;
+
+            ul {
+                display: flex;
+                list-style: none;
+
+                li {
+                    position: relative;
+                    a {
+                        display: inline-block;
+                        padding: 40px 25px;
+                        z-index: 100;
+
+                    }
+
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        bottom: 0;
+                        left: 0;
+                        right: 0;
+                        background-color: $secondaryColor;
+                        z-index: 0;
+                    }
+
+                    
+
+                    
+                }
+            }
+        }
+    }
+}

@@ -1,43 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marée</title>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Marée</title>
 
-    <!-- google font -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@200;400;500&family=Playfair+Display:ital,wght@1,700&display=swap" rel="stylesheet">    <!-- /google font -->
-    <!-- /google font -->
+        <!-- google font -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@200;400;500&family=Playfair+Display:ital,wght@1,700&display=swap" rel="stylesheet">    <!-- /google font -->
+        <!-- /google font -->
 
-    <!-- fontawesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
-    <!-- /fontawesome -->
+        <!-- fontawesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+        <!-- /fontawesome -->
 
-    <!-- style  -->
-    <link rel="stylesheet" href="dist/style.css">
-    <!-- /style  -->
+        <!-- style  -->
+        <link rel="stylesheet" href="dist/style.css">
+        <!-- /style  -->
 
-
-
-
-</head>
-<body>
-    <header>
-
-    </header>
-    <main>
-        <div class="hero">
+        <!-- Vue  -->
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+        <!-- /Vue  -->
+    </head>
+    <body>
+        <div id="root">
+            <header>
+                <div class="container">
+                    <!-- header__left -->
+                    <img src="img/logo.png" alt="logo">
+                    <!-- / header__left -->
+            
+                    <!-- header__right -->
+                    <div class="header__right">
+                        <!-- header__right__left -->
+                        <nav>
+                            <ul>
+                                <li v-for="page in pages"><a class="primaryLink" href="#">{{ page }}</a></li>
+                            </ul>
+                        </nav>
+                        <!-- / header__right__left -->
+            
+                        <!-- header__right__right -->
+                        <img src="img/svg/menu.svg" alt="menu">
+                        <!-- / header__right__right -->
+            
+            
+                    </div>
+                    <!-- header right -->
+                </div>
+            </header>
+            <main>
+                <div class="hero">
+        
+                </div>
+                <section id="portfolio"></section>
+                <section id="process"></section>
+                <section id="contact"></section>
+                <section id="blog"></section>
+            </main>
+            <footer>
+        
+            </footer>
+        
 
         </div>
-        <section id="portfolio"></section>
-        <section id="process"></section>
-        <section id="contact"></section>
-        <section id="blog"></section>
-    </main>
-    <footer>
 
-    </footer>
-    
-</body>
+        <script src="js/script.js"></script>
+        
+    </body>
 </html>
