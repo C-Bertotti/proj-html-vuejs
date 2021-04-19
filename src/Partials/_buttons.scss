@@ -1,0 +1,36 @@
+// .btn {
+//     font-size: 17px;
+//     display: inline-block;
+//     padding: 10px 20px;
+//     border-radius: 20px;
+//     border: none;
+//     font-weight: $fontMed;
+//     color: $textColor--neg;
+//     margin-right: 20px;
+
+//     &.btn--primary {
+//         background-color: $primaryColor;
+
+//         &:hover {
+//             background-color: $secondaryColor;
+//         }
+//     }
+
+//     &.btn--neg {
+//         background-color: transparent;
+//         border: 2px solid $textColor--neg;
+//         //responsive
+//         @include screen(med) {
+//         border-width: 1px;
+//         }
+//         @include screen(xlg) {
+//         border-width: 2px;
+//         }
+
+//         &:hover {
+//             background-color: $textColor--neg;
+//             color: $textColor;
+//         }
+//     }
+
+// }
