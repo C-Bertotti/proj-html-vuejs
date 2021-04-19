@@ -19,24 +19,23 @@ header > .container {
                     a {
                         display: inline-block;
                         padding: 40px 25px;
-                        z-index: 100;
-
                     }
 
-                    &::after {
+                    &::before {
                         content: '';
                         position: absolute;
-                        top: 0;
-                        bottom: 0;
-                        left: 0;
-                        right: 0;
+                        top: 49px;
+                        bottom: 41px;
+                        left: 23px;
+                        right: 100%;
                         background-color: $secondaryColor;
-                        z-index: 0;
+                        z-index: -1;
+                        transition: right 0.3s;
                     }
 
-                    
-
-                    
+                    &:hover::before {
+                        right: 20px;
+                    }
                 }
             }
         }
