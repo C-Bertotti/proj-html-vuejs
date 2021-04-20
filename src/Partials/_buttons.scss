@@ -2,35 +2,30 @@ button {
     display: inline-block;
     padding: 20px 35px;
     border: none;
+    background-color: transparent;
 
-    font-family: 'Mulish', sans-serif;
+    font-family: $secondaryFont;
     font-size: $pS;
-    font-weight: $fontReg;
+    font-weight: $fontBold;
     color: $primaryTextColor;
+    text-transform: uppercase;
+    letter-spacing: $letterSpacing;
+
+    &:hover {
+        cursor: pointer;
+    }
 
     &.btn--primary {
         background-color: $primaryColor;
-
-        // &:hover {
-        //     background-color: $secondaryColor;
-        // }
     }
 
-    // &.btn--neg {
-    //     background-color: transparent;
-    //     border: 2px solid $textColor--neg;
-    //     //responsive
-    //     @include screen(med) {
-    //     border-width: 1px;
-    //     }
-    //     @include screen(xlg) {
-    //     border-width: 2px;
-    //     }
+    &.btn--outline--sec {
+        border: 3px solid $secondaryColorDark;
+        transition: all 0.2s;
 
-    //     &:hover {
-    //         background-color: $textColor--neg;
-    //         color: $textColor;
-    //     }
-    // }
-
+        &:hover {
+            background-color: $secondaryColorDark;
+            color: #fff;
+        }
+    }
 }

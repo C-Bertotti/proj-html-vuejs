@@ -14,13 +14,57 @@ a.primaryLink {
   font-weight: 700;
 }
 
+h2 {
+  font-family: "Mulish", sans-serif;
+  font-size: 90px;
+  font-weight: 300;
+  line-height: 1;
+  margin-bottom: 40px;
+}
+h2 span {
+  font-family: "Playfair Display", serif;
+}
+
+p {
+  font-size: 13px;
+  font-weight: 300;
+  color: #898989;
+}
+
+button {
+  display: inline-block;
+  padding: 20px 35px;
+  border: none;
+  background-color: transparent;
+  font-family: "Mulish", sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  color: #000;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+button:hover {
+  cursor: pointer;
+}
+button.btn--primary {
+  background-color: #D5ECE0;
+}
+button.btn--outline--sec {
+  border: 3px solid #E1C0B0;
+  transition: all 0.2s;
+}
+button.btn--outline--sec:hover {
+  background-color: #E1C0B0;
+  color: #fff;
+}
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
-.debug * {
+.debug {
   background-color: rgba(255, 0, 0, 0.2);
 }
 
@@ -33,6 +77,10 @@ a.primaryLink {
 }
 .container--m {
   max-width: 1300px;
+}
+
+ul {
+  list-style: none;
 }
 
 header > .container {
@@ -75,58 +123,112 @@ header > .container .header__right nav ul li:hover::before {
 
 #hero {
   height: 600px;
-  position: relative;
-}
-#hero .illustration img {
-  position: absolute;
-}
-#hero .illustration .l-t {
-  bottom: 460px;
-  right: 810px;
-}
-#hero .illustration .l-c {
-  bottom: 250px;
-  right: 900px;
-}
-#hero .illustration .l-b {
-  bottom: 107px;
-  right: 860px;
-}
-#hero .illustration .main {
-  bottom: 100px;
-  height: 370px;
-}
-#hero .illustration .main--left {
-  right: 530px;
-}
-#hero .illustration .main--right {
-  right: 260px;
-}
-#hero .illustration .r-t {
-  bottom: 470px;
-  right: 300px;
-}
-#hero .illustration .r-c {
-  bottom: 380px;
-  right: 250px;
-}
-#hero .illustration .r-b {
-  bottom: 100px;
-  right: 200px;
 }
 #hero .carousel {
   height: 100%;
+  position: relative;
+}
+#hero .carousel .illustration {
+  position: relative;
+  height: 100%;
+}
+#hero .carousel .illustration img {
+  position: absolute;
+}
+#hero .carousel .illustration .l-t {
+  bottom: 460px;
+  right: 810px;
+}
+#hero .carousel .illustration .l-c {
+  bottom: 250px;
+  right: 890px;
+}
+#hero .carousel .illustration .l-b {
+  bottom: 107px;
+  right: 860px;
+}
+#hero .carousel .illustration .main {
+  bottom: 100px;
+  height: 370px;
+}
+#hero .carousel .illustration .main--left {
+  right: 530px;
+}
+#hero .carousel .illustration .main--right {
+  right: 260px;
+}
+#hero .carousel .illustration .r-t {
+  bottom: 470px;
+  right: 300px;
+}
+#hero .carousel .illustration .r-c {
+  bottom: 380px;
+  right: 250px;
+}
+#hero .carousel .illustration .r-b {
+  bottom: 100px;
+  right: 200px;
 }
 #hero .carousel .wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+#hero .carousel .wrapper > .container {
+  height: 100%;
   display: flex;
   align-items: center;
-  height: 100%;
 }
-#hero .carousel .wrapper .center {
-  display: flex;
+#hero .carousel .wrapper > .container .center {
   height: 100%;
+  display: flex;
   flex-direction: column;
 }
-#hero .carousel .wrapper .center .heading {
+#hero .carousel .wrapper > .container .center .centre-top {
   flex-grow: 1;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 60%;
+}
+#hero .carousel .wrapper > .container .center .centre-top p {
+  font-size: 20px;
+  margin-bottom: 50px;
+}
+#hero .carousel .wrapper > .container .center .bullet__wrapper {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+#hero .carousel .wrapper > .container .center .bullet__wrapper .bullet {
+  display: inline-block;
+  height: 8px;
+  width: 8px;
+  border-radius: 50%;
+  background-color: #E1C0B0;
+  margin: 0 10px;
+}
+#hero .carousel .wrapper > .container .center .bullet__wrapper .bullet.active {
+  height: 10px;
+  width: 10px;
+}
+#hero .carousel .wrapper > .container .arrow {
+  display: inline-block;
+  font-size: 16px;
+  background-color: #E1C0B0;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  transition: all 0.5s;
+}
+#hero .carousel .wrapper > .container .arrow:hover {
+  background-color: #C0E1CF;
 }

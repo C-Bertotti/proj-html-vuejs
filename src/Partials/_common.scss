@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-.debug * {
+.debug {
     background-color: rgba($color: red, $alpha: .2);
 }
 
@@ -20,4 +20,8 @@
     &--m {
         max-width: 1300px;
     }
+}
+
+ul {
+    list-style: none;
 }

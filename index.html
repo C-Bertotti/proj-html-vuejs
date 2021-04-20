@@ -7,7 +7,7 @@
 
         <!-- google font -->
         <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@200;400;500&family=Playfair+Display:ital,wght@1,700&display=swap" rel="stylesheet">    <!-- /google font -->
+        <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500&family=Playfair+Display:ital,wght@1,700&display=swap" rel="stylesheet">    <!-- /google font -->
         <!-- /google font -->
 
         <!-- fontawesome -->
@@ -44,7 +44,7 @@
                 </div>
             </header>
             <main>
-                <div id="hero" class="debug">
+                <div id="hero">
                     <div class="carousel">
                         <div class="illustration">
                             <img v-for="element in slider.illustration.elements" 
@@ -52,17 +52,29 @@
                                  :alt="element.famiglia || 'main'" 
                                  :class="element.class || 'main ' + 'main--' + element.position ">
                         </div>
-                        <div class="container wrapper">
-                            <i class="fas fa-chevron-circle-left"></i>
-                            <div class="container container--s center">
-                                <div class="heading">
-                                    <h2>Ciao</h2>
-                                    <p>Ciao</p>
-                                    <button>Ciao</button>
+                        <div class="wrapper">
+
+                            <div class="container">
+                                <i class="fas fa-chevron-left arrow"></i>  
+                                <div class="container container--s center">
+                                    <div class="centre-top">
+                                        <div class="heading">
+                                            <h2>Devotions that never <span>ends</span></h2>
+                                            <p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi.</p>
+                                            <button class="btn--outline--sec">read more</button>
+                                        </div>
+                                    </div>
+                                    <div class="bullet__wrapper">
+                                        <ul>
+                                            <li class="bullet"></li>
+                                            <li class="bullet"></li>
+                                            <li class="bullet active"></li>
+                                        </ul>
+                                    </div>
                                 </div>
-                                <div class="bullet">bullet</div>
+                                <i class="fas fa-chevron-right arrow"></i>
                             </div>
-                            <i class="fas fa-chevron-circle-right"></i>
+                            
                         </div>
 
 

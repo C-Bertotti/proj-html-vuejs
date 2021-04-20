@@ -14,3 +14,21 @@ a {
         font-weight: $fontBold;
     }
 }
+
+h2 {
+    font-family: $secondaryFont;
+    font-size: $headingXL;
+    font-weight: $fontLight;
+    line-height: 1;
+    margin-bottom: 40px;
+
+    span {
+        font-family: $primaryFont;
+    }
+}
+
+p {
+    font-size: $pS;
+    font-weight: $fontLight;
+    color: $secondaryTextColor;
+}
