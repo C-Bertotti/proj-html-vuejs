@@ -10,7 +10,7 @@ var app = new Vue ({
             'elements'
         ],
         slider: {
-            path: '../img/slider/',
+            path: 'img/slider/', 
             commonElements: {
                 folderName: 'common/',
                 completePath: '',
@@ -29,7 +29,12 @@ var app = new Vue ({
                         direzione: 'sx',
                         url: 'eucalipto-verde-sx.png',
                         completeUrl: '',
-                        inIllustration: [1]
+                        inIllustration: [
+                            {
+                                number: 1, 
+                                position: 'l-b'
+                            }
+                        ]
                     },
                     {
                         famiglia: 'eucalipto',
@@ -37,7 +42,12 @@ var app = new Vue ({
                         direzione: 'dx',
                         url: 'eucalipto-viola-dx.png',
                         completeUrl: '',
-                        inIllustration: [1]
+                        inIllustration: [
+                            {
+                                number:1, 
+                                position: 'r-t'
+                            }
+                        ]
                     },
                     {
                         famiglia: 'eucalipto',
@@ -53,7 +63,12 @@ var app = new Vue ({
                         direzione: 'dx',
                         url: 'farfalladx.png',
                         completeUrl: '',
-                        inIllustration: [1]
+                        inIllustration: [
+                            {
+                                number:1, 
+                                position: 'l-t'
+                            }
+                        ]
                     },
                     {
                         famiglia: 'farfalla',
@@ -61,7 +76,12 @@ var app = new Vue ({
                         direzione: 'sx',
                         url: 'farfallasx.png',
                         completeUrl: '',
-                        inIllustration: [1]
+                        inIllustration: [
+                            {
+                                number:1, 
+                                position: 'r-c'
+                            }
+                        ]
                     },
                     {
                         famiglia: 'felce',
@@ -77,7 +97,12 @@ var app = new Vue ({
                         direzione: null,
                         url: 'foglie.png',
                         completeUrl: '',
-                        inIllustration: [1,]
+                        inIllustration: [
+                            {
+                                number:1, 
+                                position: 'r-c'
+                            }
+                        ]
                     },
                     {
                         famiglia: 'nuvola',
@@ -117,13 +142,19 @@ var app = new Vue ({
                         direzione: 'sx',
                         url: 'quercia-sx.png',
                         completeUrl: '',
-                        inIllustration: [1,]
+                        inIllustration: [
+                            {
+                                number:1, 
+                                position: 'l-c'
+                            }
+                        ]
                     }
                 ]  
             },
             mainElements: {
                 folderName: 'main/',
                 completePath: '',
+                position: 'main',
                 elements: [
                     {
                         illustration: 1,
@@ -136,26 +167,28 @@ var app = new Vue ({
                         completeUrl: ''
                     },
                     {
-                        illustration: 1,
+                        illustration: 2,
                         url: 'main_2.png',
                         completeUrl: ''
                     },
                     {
-                        illustration: 1,
+                        illustration: 3,
                         url: 'main_3.png',
                         completeUrl: ''
                     },
                 ]  
             },
+            illustrationIndex: 1,
+            illustration: {
+                illustrationNumber: null,
+                elements: []
+            },
             illustrations: [
-                {
-                    illustrationNumber: null,
-                    elements: []
-                }
             ]
         },
     },
     mounted: function() {
+        //riempire dati vuoti dei percorsi in commonElements
         this.slider.commonElements.completePath = (this.slider.path + this.slider.commonElements.folderName);
         console.log(this.slider.commonElements.completePath);
 
@@ -164,6 +197,7 @@ var app = new Vue ({
             console.log(item);
         });
 
+        //riempire dati vuoti dei percorsi in mainElements
         this.slider.mainElements.completePath = (this.slider.path + this.slider.mainElements.folderName);
         console.log(this.slider.mainElements.completePath);
 
@@ -171,6 +205,36 @@ var app = new Vue ({
             item.completeUrl = (this.slider.mainElements.completePath + item.url);
             console.log(item);
         });
+        console.log('fine');
+        
+        //inserire nell'array illustrazione i vari elementi comuni che la compongono
+        (this.slider.commonElements.elements).forEach( (item) => {
+            if( (item.inIllustration).length > 0) {
+                (item.inIllustration).forEach( (subitem) => {
 
+                    if ( subitem.number == this.slider.illustrationIndex ) {
+                        console.log(item);
+                        (this.slider.illustration.elements).push(item);
+                    }
+                });
+            }
+        });
+
+        //inserire nell'array illustrazione i vari elementi main che la compongono
+        (this.slider.mainElements.elements).forEach( (item) => {
+            if ( item.illustration == this.slider.illustrationIndex ) {
+                (this.slider.illustration.elements).push(item);
+            }            
+        });
+
+        this.slider.illustration.illustrationNumber = this.slider.illustrationIndex;
+
+    },
+    methods: {
+        
+
+        
+        
     }
+    
 });

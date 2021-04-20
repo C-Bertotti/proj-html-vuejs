@@ -46,7 +46,7 @@
             <main>
                 <div id="hero" class="debug">
                     <div class="carousel">
-                        <img src="" alt="">
+                        <img v-for="element in slider.illustration.elements" :src="element.completeUrl" alt="ciao">
                        
                     </div>
                     <button>prova</button>
