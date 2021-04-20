@@ -3,9 +3,54 @@
     top: 0;
     left: 0;
     right: 0;
-    height: 650px;
+    height: 640px;
 
-    
+    .illustration {
+        position: relative;
+        height: 100%;
+        width: 100%;
+
+        img {
+            position: absolute;
+        }
+
+        .l-t{
+            bottom: 460px;
+            right: 810px;
+        }
+        .l-c{
+            bottom: 250px;
+            right: 900px;
+        }
+        .l-b{
+            bottom: 107px;
+            right: 860px;
+        }
+        .main{
+            bottom: 100px;
+            height: 370px;
+            &--left {
+                right: 530px;
+            }
+            &--right {
+                right: 260px;
+            }
+        }
+        .r-t{
+            bottom: 470px;
+            right: 300px;
+        }
+        .r-c{
+            bottom: 380px;
+            right: 250px;
+        }
+        .r-b{
+            bottom: 100px;
+            right: 200px;
+        }
+    }
+
 }
+
 
 

@@ -78,5 +78,47 @@ header > .container .header__right nav ul li:hover::before {
   top: 0;
   left: 0;
   right: 0;
-  height: 650px;
+  height: 640px;
+}
+#hero .illustration {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+#hero .illustration img {
+  position: absolute;
+}
+#hero .illustration .l-t {
+  bottom: 460px;
+  right: 810px;
+}
+#hero .illustration .l-c {
+  bottom: 250px;
+  right: 900px;
+}
+#hero .illustration .l-b {
+  bottom: 107px;
+  right: 860px;
+}
+#hero .illustration .main {
+  bottom: 100px;
+  height: 370px;
+}
+#hero .illustration .main--left {
+  right: 530px;
+}
+#hero .illustration .main--right {
+  right: 260px;
+}
+#hero .illustration .r-t {
+  bottom: 470px;
+  right: 300px;
+}
+#hero .illustration .r-c {
+  bottom: 380px;
+  right: 250px;
+}
+#hero .illustration .r-b {
+  bottom: 100px;
+  right: 200px;
 }

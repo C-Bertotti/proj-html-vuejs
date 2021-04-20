@@ -100,7 +100,7 @@ var app = new Vue ({
                         inIllustration: [
                             {
                                 number:1, 
-                                position: 'r-c'
+                                position: 'r-b'
                             }
                         ]
                     },
@@ -154,28 +154,32 @@ var app = new Vue ({
             mainElements: {
                 folderName: 'main/',
                 completePath: '',
-                position: 'main',
                 elements: [
                     {
                         illustration: 1,
                         url: 'main_1.png',
-                        completeUrl: ''
+                        completeUrl: '',
+                        position: 'left',
+
                     },
                     {
                         illustration: 1,
                         url: 'main_1-2.png',
-                        completeUrl: ''
+                        completeUrl: '',
+                        position: 'right'
                     },
                     {
                         illustration: 2,
                         url: 'main_2.png',
-                        completeUrl: ''
+                        completeUrl: '',
+                        position: null
                     },
                     {
                         illustration: 3,
                         url: 'main_3.png',
-                        completeUrl: ''
-                    },
+                        completeUrl: '',
+                        position: null
+                    }
                 ]  
             },
             illustrationIndex: 1,
@@ -184,7 +188,8 @@ var app = new Vue ({
                 elements: []
             },
             illustrations: [
-            ]
+            ],
+            elementClass: ''
         },
     },
     mounted: function() {
@@ -214,6 +219,8 @@ var app = new Vue ({
 
                     if ( subitem.number == this.slider.illustrationIndex ) {
                         console.log(item);
+                        this.slider.elementClass = subitem.position;
+                        item.class = this.slider.elementClass;
                         (this.slider.illustration.elements).push(item);
                     }
                 });
@@ -226,11 +233,13 @@ var app = new Vue ({
                 (this.slider.illustration.elements).push(item);
             }            
         });
+        
 
         this.slider.illustration.illustrationNumber = this.slider.illustrationIndex;
 
     },
     methods: {
+        
         
 
         

@@ -45,8 +45,8 @@
             </header>
             <main>
                 <div id="hero" class="debug">
-                    <div class="carousel">
-                        <img v-for="element in slider.illustration.elements" :src="element.completeUrl" alt="ciao">
+                    <div class="illustration">
+                        <img v-for="element in slider.illustration.elements" :src="element.completeUrl" :alt="element.famiglia || 'main'" :class="element.class || 'main ' + 'main--' + element.position ">
                        
                     </div>
                     <button>prova</button>
