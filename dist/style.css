@@ -20,7 +20,7 @@ a.primaryLink {
   box-sizing: border-box;
 }
 
-.debug {
+.debug * {
   background-color: rgba(255, 0, 0, 0.2);
 }
 
@@ -74,16 +74,8 @@ header > .container .header__right nav ul li:hover::before {
 }
 
 #hero {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 640px;
-}
-#hero .illustration {
+  height: 600px;
   position: relative;
-  height: 100%;
-  width: 100%;
 }
 #hero .illustration img {
   position: absolute;
@@ -121,4 +113,20 @@ header > .container .header__right nav ul li:hover::before {
 #hero .illustration .r-b {
   bottom: 100px;
   right: 200px;
+}
+#hero .carousel {
+  height: 100%;
+}
+#hero .carousel .wrapper {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+#hero .carousel .wrapper .center {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+}
+#hero .carousel .wrapper .center .heading {
+  flex-grow: 1;
 }

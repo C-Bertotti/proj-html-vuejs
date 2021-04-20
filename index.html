@@ -45,11 +45,31 @@
             </header>
             <main>
                 <div id="hero" class="debug">
-                    <div class="illustration">
-                        <img v-for="element in slider.illustration.elements" :src="element.completeUrl" :alt="element.famiglia || 'main'" :class="element.class || 'main ' + 'main--' + element.position ">
-                       
+                    <div class="carousel">
+                        <div class="illustration">
+                            <img v-for="element in slider.illustration.elements" 
+                                 :src="element.completeUrl" 
+                                 :alt="element.famiglia || 'main'" 
+                                 :class="element.class || 'main ' + 'main--' + element.position ">
+                        </div>
+                        <div class="container wrapper">
+                            <i class="fas fa-chevron-circle-left"></i>
+                            <div class="container container--s center">
+                                <div class="heading">
+                                    <h2>Ciao</h2>
+                                    <p>Ciao</p>
+                                    <button>Ciao</button>
+                                </div>
+                                <div class="bullet">bullet</div>
+                            </div>
+                            <i class="fas fa-chevron-circle-right"></i>
+                        </div>
+
+
+
                     </div>
-                    <button>prova</button>
+                    
+                    
         
                 </div>
                 <section id="portfolio"></section>
