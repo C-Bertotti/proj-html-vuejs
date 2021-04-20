@@ -20,6 +20,10 @@ a.primaryLink {
   box-sizing: border-box;
 }
 
+.debug {
+  background-color: rgba(255, 0, 0, 0.2);
+}
+
 .container {
   width: 95%;
   margin: 0 auto;
@@ -67,4 +71,12 @@ header > .container .header__right nav ul li::before {
 }
 header > .container .header__right nav ul li:hover::before {
   right: 20px;
+}
+
+#hero {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 650px;
 }
