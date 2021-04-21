@@ -94,13 +94,31 @@
                         <img :src="portfolio.path + work.imgNum + '.jpg'" :alt="'portfolio-' + work.imgNum">
                         <div class="caption__wrapper">
                             <div class="caption">
-                                <h3>{{ work.desc }}</h3>
+                                <h4>{{ work.desc }}</h4>
                                 <a class="caption__sec">{{ work.sec }}</a>
                             </div>
                         </div> 
                     </div>
                 </section>
-                <section id="process"></section>
+                <section id="process" class="centered">
+                    <div class="container container--s">
+                        <h3>Working <span>process</span></h3>
+                        <div v-for="step in process.steps" class="process__step">
+                            <div>
+                                <i :class="(step.full ? process.styleFull : process.styleEmpty) + ' ' + process.family + step.icon"></i>
+                            </div>
+                            <div class="process__caption">
+                                <h5>{{ step.title }}</h5>
+                                <p>{{ step.desc }}</p>
+                            </div>
+
+                        </div>
+                    
+                    
+                    
+                    </div>
+                    
+                </section>
                 <section id="contact"></section>
                 <section id="blog"></section>
             </main>

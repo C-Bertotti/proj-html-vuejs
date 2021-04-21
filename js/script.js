@@ -225,9 +225,39 @@ var app = new Vue ({
                     imgNum: '6'
                 }
             ]
-        }
+        },
+        process: {
+            styleFull: 'fas',
+            styleEmpty: 'far',
 
-        
+            family: 'fa-',
+            steps: [
+                {
+                    title: 'First theres an idea',
+                    desc: 'Lorem ipsum dolor sit, conetu adipisc sed be et ore aliqua pleasure itself.',
+                    icon: 'lightbulb',
+                    full: true
+                },
+                {
+                    title: 'Then we talk about',
+                    desc: 'Lorem ipsum dolor sit, conetu adipisc sed be et ore aliqua pleasure itself.',
+                    icon: 'comment',
+                    full: false
+                },
+                {
+                    title: 'And we think about',
+                    desc: 'Lorem ipsum dolor sit, conetu adipisc sed be et ore aliqua pleasure itself.',
+                    icon: 'cloud',
+                    full: true
+                },
+                {
+                    title: 'So we draw along',
+                    desc: 'Lorem ipsum dolor sit, conetu adipisc sed be et ore aliqua pleasure itself.',
+                    icon: 'pencil-alt',
+                    full: true
+                }
+            ]
+        }
     },
     mounted: function() {
         //riempire dati vuoti dei percorsi in commonElements

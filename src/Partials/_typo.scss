@@ -26,13 +26,24 @@ h2 {
     line-height: 1;
     margin-bottom: 40px;
 
+}
+
+h3 {
+    font-family: $secondaryFont;
+    font-size: $headingL;
+    font-weight: $fontReg;
+
+}
+
+h2, h3 {
     span {
         font-family: $primaryFont;
         font-weight: $fontBold;
     }
 }
 
-h3 {
+
+h4 {
     font-family: $secondaryFont;
     font-size: $headingM;
     font-weight: $fontReg;

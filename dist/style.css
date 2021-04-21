@@ -24,12 +24,19 @@ h2 {
   line-height: 1;
   margin-bottom: 40px;
 }
-h2 span {
+
+h3 {
+  font-family: "Mulish", sans-serif;
+  font-size: 65px;
+  font-weight: 400;
+}
+
+h2 span, h3 span {
   font-family: "Playfair Display", serif;
   font-weight: 700;
 }
 
-h3 {
+h4 {
   font-family: "Mulish", sans-serif;
   font-size: 26px;
   font-weight: 400;
@@ -91,6 +98,10 @@ button.btn--outline--sec:hover {
 
 ul {
   list-style: none;
+}
+
+.centered {
+  text-align: center;
 }
 
 header > .container {
@@ -243,7 +254,12 @@ header > .container .header__right nav ul li:hover::before {
   background-color: #C0E1CF;
 }
 
+section {
+  padding: 100px 0;
+}
+
 #portfolio {
+  padding: 0;
   display: flex;
   flex-wrap: wrap;
   width: 100%;
