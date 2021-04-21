@@ -2,17 +2,11 @@
     .steps__wrapper {
         position: relative;
         margin-top: 70px;
-
-        #line-process {
-            width: 80%;
-       }
     }
 
     .steps {
         display: flex;
         justify-content: space-between;
-        position: absolute;
-        top: 0;
 
         .process__step {
             flex-basis: calc( (100% - (32px * 3 ) ) / 4);
@@ -40,5 +34,14 @@
                 line-height: 1.8;
             }
         }
+    }
+
+    #line-process {
+        position: absolute;
+        top: 0;    
+        left: 50%;
+        transform: translateX(-50%);
+        width: 90%;
+        z-index: -2;
     }
 }

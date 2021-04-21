@@ -21,11 +21,17 @@ button {
 
     &.btn--outline--sec {
         border: 3px solid $secondaryColorDark;
-        transition: all 0.2s;
-
-        &:hover {
-            background-color: $secondaryColorDark;
-            color: #fff;
-        }
     }
+ 
+}
+
+.btn--primary,
+.btn--outline--sec {
+    transition: all 0.2s;
+}
+
+.btn--primary:hover,
+.btn--outline--sec:hover {
+    background-color: $secondaryColorDark;
+    color: #fff;
 }
