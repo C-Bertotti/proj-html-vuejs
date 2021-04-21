@@ -1,0 +1,10 @@
+#portfolio {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%; 
+
+    img {
+        width: calc(100% / 3);
+    }
+    
+}

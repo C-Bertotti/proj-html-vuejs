@@ -232,3 +232,12 @@ header > .container .header__right nav ul li:hover::before {
 #hero .carousel .wrapper > .container .arrow:hover {
   background-color: #C0E1CF;
 }
+
+#portfolio {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+#portfolio img {
+  width: calc(100% / 3);
+}
