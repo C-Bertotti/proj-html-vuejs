@@ -13,6 +13,10 @@ a {
         text-transform: uppercase;
         font-weight: $fontBold;
     }
+
+    &:hover {
+        cursor: pointer;
+    }
 }
 
 h2 {
@@ -24,7 +28,14 @@ h2 {
 
     span {
         font-family: $primaryFont;
+        font-weight: $fontBold;
     }
+}
+
+h3 {
+    font-family: $secondaryFont;
+    font-size: $headingM;
+    font-weight: $fontReg;
 }
 
 p {

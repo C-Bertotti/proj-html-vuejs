@@ -7,7 +7,7 @@
 
         <!-- google font -->
         <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500&family=Playfair+Display:ital,wght@1,700&display=swap" rel="stylesheet">    <!-- /google font -->
+        <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500&family=Playfair+Display:ital,wght@1,400;1,700&display=swap" rel="stylesheet">    <!-- /google font -->
         <!-- /google font -->
 
         <!-- fontawesome -->
@@ -90,7 +90,15 @@
                     </div>
                 </div>
                 <section id="portfolio">
-                    <img v-for="work in portfolio.works" :src="portfolio.path + work + '.jpg'" :alt="'portfolio-' + work">
+                    <div class="proj" v-for="work in portfolio.works">
+                        <img :src="portfolio.path + work.imgNum + '.jpg'" :alt="'portfolio-' + work.imgNum">
+                        <div class="caption__wrapper">
+                            <div class="caption">
+                                <h3>{{ work.desc }}</h3>
+                                <a class="caption__sec">{{ work.sec }}</a>
+                            </div>
+                        </div> 
+                    </div>
                 </section>
                 <section id="process"></section>
                 <section id="contact"></section>

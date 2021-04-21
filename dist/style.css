@@ -13,6 +13,9 @@ a.primaryLink {
   text-transform: uppercase;
   font-weight: 700;
 }
+a:hover {
+  cursor: pointer;
+}
 
 h2 {
   font-family: "Mulish", sans-serif;
@@ -23,6 +26,13 @@ h2 {
 }
 h2 span {
   font-family: "Playfair Display", serif;
+  font-weight: 700;
+}
+
+h3 {
+  font-family: "Mulish", sans-serif;
+  font-size: 26px;
+  font-weight: 400;
 }
 
 p {
@@ -237,7 +247,42 @@ header > .container .header__right nav ul li:hover::before {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
+  overflow: hidden;
 }
-#portfolio img {
+#portfolio .proj {
   width: calc(100% / 3);
+  position: relative;
+}
+#portfolio .proj img {
+  width: 100%;
+  display: block;
+}
+#portfolio .proj .caption__wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+  overflow: hidden;
+}
+#portfolio .proj .caption__wrapper .caption {
+  display: inline-block;
+  background-color: #fff;
+  padding: 25px 35px 35px;
+  position: relative;
+  left: -100%;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all 0.6s;
+}
+#portfolio .proj .caption__wrapper .caption__sec {
+  font-family: "Playfair Display", serif;
+  font-size: 16px;
+  font-weight: 400;
+  display: inline-block;
+  margin-top: 5px;
+}
+#portfolio .proj .caption__wrapper:hover .caption {
+  left: 0;
 }

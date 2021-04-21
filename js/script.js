@@ -194,12 +194,36 @@ var app = new Vue ({
         portfolio: {
             path: 'img/portfolio/port-img-',
             works: [
-                '1',
-                '2',
-                '3',
-                '4',
-                '5',
-                '6'
+                {
+                    desc: 'Illustrations of novels',
+                    sec: 'Illustration',
+                    imgNum: '1'
+                },
+                {
+                    desc: 'Illustrations of novels',
+                    sec: 'Illustration',
+                    imgNum: '2'
+                },
+                {
+                    desc: 'Illustrations of novels',
+                    sec: 'Illustration',
+                    imgNum: '3'
+                },
+                {
+                    desc: 'Illustrations of novels',
+                    sec: 'Illustration',
+                    imgNum: '4'
+                },
+                {
+                    desc: 'Illustrations of novels',
+                    sec: 'Illustration',
+                    imgNum: '5'
+                },
+                {
+                    desc: 'Illustrations of novels',
+                    sec: 'Illustration',
+                    imgNum: '6'
+                }
             ]
         }
 
