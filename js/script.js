@@ -191,6 +191,19 @@ var app = new Vue ({
             ],
             elementClass: ''
         },
+        portfolio: {
+            path: 'img/portfolio/port-img-',
+            works: [
+                '1',
+                '2',
+                '3',
+                '4',
+                '5',
+                '6'
+            ]
+        }
+
+        
     },
     mounted: function() {
         //riempire dati vuoti dei percorsi in commonElements

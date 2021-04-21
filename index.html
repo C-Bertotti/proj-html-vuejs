@@ -53,10 +53,14 @@
                                  :class="element.class || 'main ' + 'main--' + element.position ">
                         </div>
                         <div class="wrapper">
-
                             <div class="container">
+                                <!-- freccia sx -->
                                 <i class="fas fa-chevron-left arrow"></i>  
+                                <!-- /freccia sx -->
+
+                                <!-- parte centrale -->
                                 <div class="container container--s center">
+                                    <!-- centrale superiore -->
                                     <div class="centre-top">
                                         <div class="heading">
                                             <h2>Devotions that never <span>ends</span></h2>
@@ -64,6 +68,9 @@
                                             <button class="btn--outline--sec">read more</button>
                                         </div>
                                     </div>
+                                    <!-- / centrale superiore -->
+
+                                    <!-- centrale inferiore - bullet -->
                                     <div class="bullet__wrapper">
                                         <ul>
                                             <li class="bullet"></li>
@@ -71,20 +78,20 @@
                                             <li class="bullet active"></li>
                                         </ul>
                                     </div>
+                                    <!-- /centrale inferiore - bullet -->
                                 </div>
+                                <!-- /parte centrale -->
+
+                                <!-- freccia dx -->
                                 <i class="fas fa-chevron-right arrow"></i>
+                                <!-- / freccia dx -->
                             </div>
-                            
                         </div>
-
-
-
                     </div>
-                    
-                    
-        
                 </div>
-                <section id="portfolio"></section>
+                <section id="portfolio">
+                    <img v-for="work in portfolio.works" :src="portfolio.path + work + '.jpg'" :alt="'portfolio-' + work">
+                </section>
                 <section id="process"></section>
                 <section id="contact"></section>
                 <section id="blog"></section>
