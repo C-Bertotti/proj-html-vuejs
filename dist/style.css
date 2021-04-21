@@ -42,10 +42,33 @@ h4 {
   font-weight: 400;
 }
 
+h5 {
+  font-family: "Mulish", sans-serif;
+  font-size: 21px;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
 p {
   font-size: 13px;
   font-weight: 300;
   color: #898989;
+}
+
+.primaryColorDark {
+  color: #C0E1CF;
+}
+
+.supportColor-1 {
+  color: #FAD02C;
+}
+
+.supportColor-2 {
+  color: #80465F;
+}
+
+.supportColor-3 {
+  color: #EB6950;
 }
 
 button {
@@ -90,7 +113,7 @@ button.btn--outline--sec:hover {
   margin: 0 auto;
 }
 .container--s {
-  max-width: 1150px;
+  max-width: 1170px;
 }
 .container--m {
   max-width: 1300px;
@@ -301,4 +324,32 @@ section {
 }
 #portfolio .proj .caption__wrapper:hover .caption {
   left: 0;
+}
+
+#process .steps__wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+#process .steps__wrapper .process__step {
+  flex-basis: calc( (100% - (32px * 3 ) ) / 4);
+  display: flex;
+  flex-wrap: wrap;
+}
+#process .steps__wrapper .process__step .process__icon {
+  height: 160px;
+  width: 160px;
+  border-radius: 50%;
+  background-color: #FAF7F2;
+  margin: 0 auto 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#process .steps__wrapper .process__step .process__icon i {
+  font-size: 40px;
+}
+#process .steps__wrapper .process__step .process__desc {
+  font-size: 16px;
+  font-weight: 200;
+  line-height: 1.8;
 }

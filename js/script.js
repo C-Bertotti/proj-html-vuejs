@@ -236,25 +236,29 @@ var app = new Vue ({
                     title: 'First theres an idea',
                     desc: 'Lorem ipsum dolor sit, conetu adipisc sed be et ore aliqua pleasure itself.',
                     icon: 'lightbulb',
-                    full: true
+                    full: true,
+                    color: 'primaryColorDark'
                 },
                 {
                     title: 'Then we talk about',
                     desc: 'Lorem ipsum dolor sit, conetu adipisc sed be et ore aliqua pleasure itself.',
                     icon: 'comment',
-                    full: false
+                    full: false,
+                    color: 'supportColor-1'
                 },
                 {
                     title: 'And we think about',
                     desc: 'Lorem ipsum dolor sit, conetu adipisc sed be et ore aliqua pleasure itself.',
                     icon: 'cloud',
-                    full: true
+                    full: true,
+                    color: 'supportColor-2'
                 },
                 {
                     title: 'So we draw along',
                     desc: 'Lorem ipsum dolor sit, conetu adipisc sed be et ore aliqua pleasure itself.',
                     icon: 'pencil-alt',
-                    full: true
+                    full: true,
+                    color: 'supportColor-3'
                 }
             ]
         }

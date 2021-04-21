@@ -49,8 +49,32 @@ h4 {
     font-weight: $fontReg;
 }
 
+h5 {
+    font-family: $secondaryFont;
+    font-size: $headingS;
+    font-weight: $fontReg;
+    margin-bottom: 20px;
+}
+
 p {
     font-size: $pS;
     font-weight: $fontLight;
     color: $secondaryTextColor;
+}
+
+//helper cambio colore
+.primaryColorDark {
+    color: $primaryColorDark;
+}
+
+.supportColor-1 {
+    color: $supportColor-1;
+}
+
+.supportColor-2 {
+    color: $supportColor-2;
+}
+
+.supportColor-3 {
+    color: $supportColor-3;
 }

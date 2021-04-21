@@ -103,16 +103,18 @@
                 <section id="process" class="centered">
                     <div class="container container--s">
                         <h3>Working <span>process</span></h3>
-                        <div v-for="step in process.steps" class="process__step">
-                            <div>
-                                <i :class="(step.full ? process.styleFull : process.styleEmpty) + ' ' + process.family + step.icon"></i>
+                        <div class="steps__wrapper">
+                            <div v-for="step in process.steps" class="process__step debug">
+                                <div class="process__icon">
+                                    <i :class="(step.full ? process.styleFull : process.styleEmpty) + ' ' + process.family + step.icon + ' ' + step.color"></i>
+                                </div>
+                                <div class="process__caption">
+                                    <h5>{{ step.title }}</h5>
+                                    <p class="process__desc">{{ step.desc }}</p>
+                                </div>
                             </div>
-                            <div class="process__caption">
-                                <h5>{{ step.title }}</h5>
-                                <p>{{ step.desc }}</p>
-                            </div>
-
                         </div>
+                        
                     
                     
                     
