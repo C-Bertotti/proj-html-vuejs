@@ -327,15 +327,24 @@ section {
 }
 
 #process .steps__wrapper {
+  position: relative;
+  margin-top: 70px;
+}
+#process .steps__wrapper #line-process {
+  width: 80%;
+}
+#process .steps {
   display: flex;
   justify-content: space-between;
+  position: absolute;
+  top: 0;
 }
-#process .steps__wrapper .process__step {
+#process .steps .process__step {
   flex-basis: calc( (100% - (32px * 3 ) ) / 4);
   display: flex;
   flex-wrap: wrap;
 }
-#process .steps__wrapper .process__step .process__icon {
+#process .steps .process__step .process__icon {
   height: 160px;
   width: 160px;
   border-radius: 50%;
@@ -345,10 +354,10 @@ section {
   justify-content: center;
   align-items: center;
 }
-#process .steps__wrapper .process__step .process__icon i {
+#process .steps .process__step .process__icon i {
   font-size: 40px;
 }
-#process .steps__wrapper .process__step .process__desc {
+#process .steps .process__step .process__desc {
   font-size: 16px;
   font-weight: 200;
   line-height: 1.8;
