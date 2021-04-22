@@ -261,6 +261,44 @@ var app = new Vue ({
                     color: 'supportColor-3'
                 }
             ]
+        },
+        blog: {
+            pathImg: 'img/blog/blog-',
+            articles: [
+                {
+                    title: 'This way, loves: a detailed guide through new design',
+                    author: 'Emily Fields',
+                    imgNum: '1.jpg',
+                    completePath: '',
+                    date: {
+                        day: '07',
+                        month: 'may',
+                        year: '19'
+                    }
+                },
+                {
+                    title: 'This way, loves: a detailed guide through new design',
+                    author: 'Emily Fields',
+                    imgNum: '2.jpg',
+                    completePath: '',
+                    date: {
+                        day: '07',
+                        month: 'may',
+                        year: '19'
+                    }
+                },
+                {
+                    title: 'Introduce Richard Laperrière of those amazing features',
+                    author: 'Emily Fields',
+                    imgNum: '3.jpg',
+                    completePath: '',
+                    date: {
+                        day: '07',
+                        month: 'may',
+                        year: '19'
+                    }
+                }  
+            ]
         }
     },
     mounted: function() {
@@ -305,9 +343,13 @@ var app = new Vue ({
             }            
         });
         
-
         this.slider.illustration.illustrationNumber = this.slider.illustrationIndex;
 
+        //riempire dati vuoti dei percorsiImg in blog - article
+        (this.blog.articles).forEach( (article) => {
+            article.completePath = (this.blog.pathImg + article.imgNum);
+            console.log(article);
+        });
     },
     methods: {
         
