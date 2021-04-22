@@ -1,0 +1,42 @@
+#blog {
+    .container{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    article {
+        width: calc( ( 100% - (25px * 2) ) / 3);
+
+        .img__wrapper {
+            overflow: hidden;
+            height: 260px;
+
+            img {
+                width: 100%;
+                object-fit: cover;
+                transition: transform 0.5s;
+            }
+
+            &:hover img {
+                transform: scale(1.05);
+            }
+
+        }
+        
+        .caption {
+            h6 {
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;  
+                overflow: hidden;
+            }
+
+            p {
+                font-family: $primaryFont;
+            }
+        }
+        
+        
+       
+    }
+}
