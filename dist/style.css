@@ -400,10 +400,39 @@ section {
 }
 #blog article .date {
   width: 60px;
-  height: 70px;
   position: absolute;
   top: -13px;
   left: 13px;
+}
+#blog article .date .day {
+  background-color: #C0E1CF;
+  height: 35px;
+}
+#blog article .date .month {
+  position: relative;
+  height: 23px;
+  background-color: #F2D0C7;
+}
+#blog article .date .month::before {
+  position: absolute;
+  top: 23px;
+  content: "";
+  width: 0;
+  height: 0;
+  border-top: 0px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 30px solid #F2D0C7;
+}
+#blog article .date .month::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-top: 0px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-right: 30px solid #F2D0C7;
+  top: 23px;
+  right: 0;
 }
 #blog article .img__wrapper {
   overflow: hidden;
