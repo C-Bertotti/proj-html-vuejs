@@ -22,6 +22,7 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                transition: transform 0.5s;
 
                 i {
                     font-size: 40px;
@@ -32,6 +33,10 @@
                 font-size: $pM;
                 font-weight: $fontXLight;
                 line-height: 1.8;
+            }
+
+            &:hover .process__icon{
+                transform: scale(1.1);
             }
         }
     }
