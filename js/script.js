@@ -299,7 +299,37 @@ var app = new Vue ({
                     }
                 }  
             ]
-        }
+        },
+        footer: {
+            mail: 'maree.qode@gmail.com',
+            phone: '+44645 321 789',
+            address: {
+                street: 'Avenue d’Auderghem 10',
+                city: '1040 Brussels, Belgium'
+            },
+            social: [
+                {
+                    socialName: 'twitter',
+                    socialLink: 'https://twitter.com/?lang=it',
+                    socialIcon: 'fab fa-twitter' // associare con v-bind alla classe del tag i
+                },
+                {
+                    socialName: 'pinterest',
+                    socialLink: 'https://www.pinterest.it/',
+                    socialIcon: 'fab fa-pinterest-p' // associare con v-bind alla classe del tag i
+                },
+                {
+                    socialName: 'facebook',
+                    socialLink: 'https://www.facebook.com/',
+                    socialIcon: 'fab fa-facebook-f' // associare con v-bind alla classe del tag i
+                },
+                {
+                    socialName: 'linkedin',
+                    socialLink: 'https://it.linkedin.com/',
+                    socialIcon: 'fab fa-linkedin-in' // associare con v-bind alla classe del tag i
+                }
+            ]
+        } 
     },
     mounted: function() {
         //riempire dati vuoti dei percorsi in commonElements

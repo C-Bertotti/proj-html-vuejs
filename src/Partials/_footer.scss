@@ -1,0 +1,34 @@
+footer {
+    background-color: $primaryColorDark;
+    padding: 70px 0;
+
+    .container {
+        display: flex;
+
+        .column {
+            flex-grow: 1;
+        }
+    }
+
+    p {
+        color: $primaryTextColor;
+        font-size: $pM;
+        margin: 15px 0;
+    }
+
+    .social__list {
+        margin-top: 15px;
+
+        li {
+            display: inline-block;
+    
+            &:not(:last-of-type) {
+                margin-right: 30px;
+            }
+            
+            a {
+                font-size: $pM;
+            }
+        }
+    }
+}

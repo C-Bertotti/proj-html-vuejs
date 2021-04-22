@@ -481,3 +481,31 @@ section {
 #blog article .author a:hover {
   text-decoration: underline;
 }
+
+footer {
+  background-color: #C0E1CF;
+  padding: 70px 0;
+}
+footer .container {
+  display: flex;
+}
+footer .container .column {
+  flex-grow: 1;
+}
+footer p {
+  color: #000;
+  font-size: 16px;
+  margin: 15px 0;
+}
+footer .social__list {
+  margin-top: 15px;
+}
+footer .social__list li {
+  display: inline-block;
+}
+footer .social__list li:not(:last-of-type) {
+  margin-right: 30px;
+}
+footer .social__list li a {
+  font-size: 16px;
+}

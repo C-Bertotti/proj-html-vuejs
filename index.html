@@ -154,15 +154,32 @@
                                     <p>{{ article.date.month }} '{{ article.date.year }}</p>
                                 </div>
                             </div>
-                             <!-- bandiera pubblicazione -->
-                            
+                            <!-- bandiera pubblicazione -->
                         </article>
                     </div>
-
-                </section>
+                </section> 
             </main>
             <footer>
-        
+                <div class="container container--s">
+                    <div class="column">
+                        <img src="img/logo.png" alt="logo footer">
+                        <p>Let’s Get Creative</p>
+                    </div>
+                    <div class="column">
+                        <p>{{ footer.mail }}</p>
+                        <p>{{ footer.phone }}</p>
+                    </div>
+                    <div class="column">
+                        <p>{{ footer.address.street }}</p>
+                        <p>{{ footer.address.city }}</p>
+                    </div>
+                    <div class="column">
+                        <p>Stay in touch with us</p>
+                        <ul class="social__list">
+                            <li v-for="item in footer.social"><a :href="item.socialLink"><i :class="item.socialIcon"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
             </footer>
         
 
