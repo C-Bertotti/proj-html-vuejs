@@ -400,24 +400,42 @@ section {
   position: relative;
 }
 #blog article .date {
-  width: 60px;
+  width: 65px;
   position: absolute;
   top: -13px;
   left: 13px;
   filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.1));
+  text-align: center;
+}
+#blog article .date p {
+  color: #000;
 }
 #blog article .date .day {
   background-color: #C0E1CF;
-  height: 35px;
+  height: 45px;
+}
+#blog article .date .day p {
+  font-family: "Playfair Display", serif;
+  font-size: 35px;
+  font-weight: 700;
+  line-height: 35px;
 }
 #blog article .date .month {
   position: relative;
   height: 23px;
   background-color: #F2D0C7;
 }
+#blog article .date .month p {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 1px;
+  line-height: 23px;
+}
 #blog article .date .month::before {
   position: absolute;
   top: 23px;
+  left: 0;
   content: "";
   width: 0;
   height: 0;
