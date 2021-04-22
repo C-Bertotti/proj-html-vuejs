@@ -6,10 +6,20 @@
 
     article {
         width: calc( ( 100% - (25px * 2) ) / 3);
+        position: relative;
+
+        .date {
+            width: 60px;
+            height: 70px;
+            position: absolute;
+            top: -13px;
+            left: 13px;
+        }
 
         .img__wrapper {
             overflow: hidden;
             height: 260px;
+            z-index: -3;
 
             img {
                 width: 100%;

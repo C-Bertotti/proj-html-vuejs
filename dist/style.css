@@ -396,10 +396,19 @@ section {
 }
 #blog article {
   width: calc( ( 100% - (25px * 2) ) / 3);
+  position: relative;
+}
+#blog article .date {
+  width: 60px;
+  height: 70px;
+  position: absolute;
+  top: -13px;
+  left: 13px;
 }
 #blog article .img__wrapper {
   overflow: hidden;
   height: 260px;
+  z-index: -3;
 }
 #blog article .img__wrapper img {
   width: 100%;
