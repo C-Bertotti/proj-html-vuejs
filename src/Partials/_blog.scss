@@ -2,6 +2,7 @@
     .container{
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;
     }
 
     article {
@@ -13,6 +14,7 @@
             position: absolute;
             top: -13px;
             left: 13px;
+            filter: drop-shadow(0 2px 2px rgba(0, 0, 0, .1));
 
             .day {
                 background-color: $primaryColorDark;
