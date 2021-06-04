@@ -45,8 +45,13 @@ h2 span, h3 span {
 
 h4 {
   font-family: "Mulish", sans-serif;
-  font-size: 26px;
+  font-size: 21px;
   font-weight: 400;
+}
+@media screen and (min-width: 1200px) {
+  h4 {
+    font-size: 26px;
+  }
 }
 
 h5 {
@@ -287,8 +292,13 @@ header > .container .header__right nav ul li::before {
 header > .container .header__right nav ul li:hover::before {
   right: 20px;
 }
-header > .container .header__right button {
+header > .container .header__right button.nav__btn {
   padding: 25px 0;
+}
+@media screen and (min-width: 992px) {
+  header > .container .header__right button.nav__btn {
+    display: none;
+  }
 }
 
 #hero {
@@ -666,8 +676,17 @@ section {
   overflow: hidden;
 }
 #portfolio .proj {
-  width: calc(100% / 3);
   position: relative;
+}
+@media screen and (min-width: 768px) {
+  #portfolio .proj {
+    width: calc(100% / 2);
+  }
+}
+@media screen and (min-width: 992px) {
+  #portfolio .proj {
+    width: calc(100% / 3);
+  }
 }
 #portfolio .proj img {
   width: 100%;
@@ -675,29 +694,51 @@ section {
 }
 #portfolio .proj .caption__wrapper {
   position: absolute;
-  top: 0;
   left: 0;
-  bottom: 0;
+  bottom: 50px;
   right: 0;
   z-index: 1;
   overflow: hidden;
 }
+@media screen and (min-width: 992px) {
+  #portfolio .proj .caption__wrapper {
+    bottom: 20px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #portfolio .proj .caption__wrapper {
+    top: 0;
+    bottom: 0;
+  }
+}
 #portfolio .proj .caption__wrapper .caption {
+  left: 0;
   display: inline-block;
   background-color: #fff;
-  padding: 25px 35px 35px;
+  padding: 12px 20px 20px;
   position: relative;
-  left: -100%;
-  top: 50%;
-  transform: translateY(-50%);
-  transition: all 0.6s;
+}
+@media screen and (min-width: 1200px) {
+  #portfolio .proj .caption__wrapper .caption {
+    padding: 25px 35px 35px;
+    left: -100%;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 0.6s;
+  }
 }
 #portfolio .proj .caption__wrapper .caption__sec {
   font-family: "Playfair Display", serif;
-  font-size: 16px;
+  font-size: 13px;
   font-weight: 400;
   display: inline-block;
-  margin-top: 5px;
+  margin-top: 2px;
+}
+@media screen and (min-width: 1200px) {
+  #portfolio .proj .caption__wrapper .caption__sec {
+    font-size: 16px;
+    margin-top: 5px;
+  }
 }
 #portfolio .proj .caption__wrapper:hover .caption {
   left: 0;

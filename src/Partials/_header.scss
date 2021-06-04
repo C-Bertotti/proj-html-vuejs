@@ -48,8 +48,13 @@ header > .container {
             }
         }
 
-        button {
+        button.nav__btn {
             padding: 25px 0;
+
+            //responsive 
+            @include screen (l) {
+                display: none;
+            }
         }
     }
 }

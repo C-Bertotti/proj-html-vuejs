@@ -6,10 +6,16 @@
     overflow: hidden;
 
     .proj {
-        width: calc(100% / 3);
         position: relative;
-        
 
+        //responsive
+        @include screen (m) {
+            width: calc(100% / 2);
+        }
+        @include screen (l) {
+            width: calc(100% / 3);
+        }
+        
         img {
             width: 100%;
             display: block;
@@ -17,29 +23,50 @@
 
         .caption__wrapper {
             position: absolute;
-            top: 0;
             left: 0;
-            bottom: 0;
+            bottom: 50px;
             right: 0;
             z-index: 1;
             overflow: hidden;
 
+            //responsive
+            @include screen (l) {
+                bottom: 20px;
+            }
+            @include screen (xl) {
+                top: 0;
+                bottom: 0;
+            }
+
             .caption {
+                left: 0;
                 display: inline-block;
                 background-color: #fff;
-                padding: 25px 35px 35px;
+                padding: 12px 20px 20px;
                 position: relative;
-                left: -100%;
-                top: 50%;
-                transform: translateY(-50%);
-                transition: all .6s;
+                
+                //responsive
+                @include screen (xl) {
+                    padding: 25px 35px 35px;
+                    left: -100%;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    transition: all .6s;
+                }
 
                 &__sec {
                     font-family: $primaryFont;
-                    font-size: $pM;
+                    font-size: $pS;
                     font-weight: $fontReg;
                     display: inline-block;
+                    margin-top: 2px;
+
+                    //responsive
+                    @include screen (xl) {
+                    font-size: $pM;
                     margin-top: 5px;
+
+                    }
                 }
             }
 

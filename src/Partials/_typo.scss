@@ -50,8 +50,12 @@ h2, h3 {
 
 h4 {
     font-family: $secondaryFont;
-    font-size: $headingM;
+    font-size: $headingS;
     font-weight: $fontReg;
+    //responsive
+    @include screen (xl) {
+        font-size: $headingM;
+    }
 }
 
 h5 {
