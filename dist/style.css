@@ -19,10 +19,15 @@ a:hover {
 
 h2 {
   font-family: "Mulish", sans-serif;
-  font-size: 90px;
+  font-size: 60px;
   font-weight: 300;
   line-height: 1;
   margin-bottom: 40px;
+}
+@media screen and (min-width: 992px) {
+  h2 {
+    font-size: 90px;
+  }
 }
 
 h3 {
@@ -127,23 +132,116 @@ html {
   background-color: rgba(255, 0, 0, 0.2);
 }
 
-.container {
-  width: 95%;
-  margin: 0 auto;
-}
-.container--s {
-  max-width: 1170px;
-}
-.container--m {
-  max-width: 1300px;
-}
-
 ul {
   list-style: none;
 }
 
 .centered {
   text-align: center;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+@media screen and (min-width: 576px) {
+  .container {
+    width: 95%;
+  }
+}
+.container--s {
+  /*
+  @include screen(s) {
+      max-width: 500px;
+  }
+  @include screen(m) {
+      width: 80%;
+      max-width: 720px;
+  }
+  @include screen(l) {
+      max-width: 810px;
+  }
+  @include screen(xl) {
+      max-width: 745px;
+  }
+  */
+}
+@media screen and (min-width: 1400px) {
+  .container--s {
+    max-width: 1170px;
+  }
+}
+.container--m {
+  max-width: 1300px;
+}
+
+/*
+.container {
+    width: 85%;
+    margin: 0 auto;
+
+    //responsive
+    &--s {
+      @include screen(small) {
+        max-width: 500px;
+      }
+      @include screen(med) {
+        width: 80%;
+        max-width: 720px;
+      }
+      @include screen(lg) {
+        max-width: 810px;
+      }
+      @include screen(xlg) {
+        max-width: 745px;
+      }
+      @include screen(xxlg) {
+        max-width: 800px;
+      }
+    }
+
+    &--l {
+      @include screen(small) {
+        max-width: 560px;
+      }
+      @include screen(med) {
+        width: 80%;
+        max-width: 730px;
+      }
+      @include screen(lg) {
+        max-width: 890px;
+      }
+      @include screen(xlg) {
+        max-width: 1110px;
+      }
+      @include screen(xxlg) {
+        max-width: 1170px;
+      }
+    }
+
+    &--xl {
+      @include screen(small) {
+        max-width: 650px;
+      }
+      @include screen(med) {
+        width: 85%;
+        max-width: 800px;
+      }
+      @include screen(lg) {
+        max-width: 950px;
+      }
+      @include screen(xlg) {
+        max-width: 1100px;
+      }
+      @include screen(xxlg) {
+        max-width: 1200px;
+      }
+    }
+  }
+
+*/
+header {
+  box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.03);
 }
 
 header > .container {
@@ -157,6 +255,12 @@ header > .container .header__right {
 }
 header > .container .header__right nav {
   margin-right: 25px;
+  display: none;
+}
+@media screen and (min-width: 992px) {
+  header > .container .header__right nav {
+    display: block;
+  }
 }
 header > .container .header__right nav ul {
   display: flex;
@@ -183,6 +287,9 @@ header > .container .header__right nav ul li::before {
 header > .container .header__right nav ul li:hover::before {
   right: 20px;
 }
+header > .container .header__right button {
+  padding: 25px 0;
+}
 
 #hero {
   height: 600px;
@@ -199,38 +306,136 @@ header > .container .header__right nav ul li:hover::before {
   position: absolute;
 }
 #hero .carousel .illustration .l-t {
-  bottom: 460px;
-  right: 810px;
+  bottom: 510px;
+  right: 510px;
+}
+@media screen and (min-width: 768px) {
+  #hero .carousel .illustration .l-t {
+    bottom: 460px;
+    right: 810px;
+  }
 }
 #hero .carousel .illustration .l-c {
-  bottom: 250px;
-  right: 890px;
+  bottom: 105px;
+  right: 420px;
+  height: 30px;
+}
+@media screen and (min-width: 992px) {
+  #hero .carousel .illustration .l-c {
+    bottom: 250px;
+    right: 890px;
+    height: initial;
+  }
 }
 #hero .carousel .illustration .l-b {
-  bottom: 107px;
-  right: 860px;
+  bottom: 60px;
+  right: 355px;
+  height: 80px;
+}
+@media screen and (min-width: 992px) {
+  #hero .carousel .illustration .l-b {
+    bottom: 107px;
+    right: 860px;
+    height: initial;
+  }
 }
 #hero .carousel .illustration .main {
-  bottom: 100px;
-  height: 370px;
+  bottom: 60px;
+  height: 180px;
+}
+@media screen and (min-width: 768px) {
+  #hero .carousel .illustration .main {
+    height: 220px;
+  }
+}
+@media screen and (min-width: 992px) {
+  #hero .carousel .illustration .main {
+    height: 300px;
+  }
+}
+@media screen and (min-width: 1400px) {
+  #hero .carousel .illustration .main {
+    bottom: 100px;
+    height: 370px;
+  }
 }
 #hero .carousel .illustration .main--left {
-  right: 530px;
+  right: 220px;
+}
+@media screen and (min-width: 768px) {
+  #hero .carousel .illustration .main--left {
+    right: 250px;
+  }
+}
+@media screen and (min-width: 768px) {
+  #hero .carousel .illustration .main--left {
+    right: 330px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #hero .carousel .illustration .main--left {
+    right: 530px;
+  }
 }
 #hero .carousel .illustration .main--right {
-  right: 260px;
+  right: 100px;
+}
+@media screen and (min-width: 768px) {
+  #hero .carousel .illustration .main--right {
+    right: 100px;
+  }
+}
+@media screen and (min-width: 768px) {
+  #hero .carousel .illustration .main--right {
+    right: 130px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #hero .carousel .illustration .main--right {
+    right: 260px;
+  }
 }
 #hero .carousel .illustration .r-t {
-  bottom: 470px;
-  right: 300px;
+  bottom: 450px;
+  right: 60px;
+  height: 50px;
+}
+@media screen and (min-width: 992px) {
+  #hero .carousel .illustration .r-t {
+    bottom: 470px;
+    right: 300px;
+    height: initial;
+  }
 }
 #hero .carousel .illustration .r-c {
-  bottom: 380px;
-  right: 250px;
+  bottom: 200px;
+  right: 100px;
+  height: 30px;
+}
+@media screen and (min-width: 992px) {
+  #hero .carousel .illustration .r-c {
+    bottom: 380px;
+    right: 250px;
+    height: initial;
+  }
 }
 #hero .carousel .illustration .r-b {
-  bottom: 100px;
-  right: 200px;
+  bottom: 60px;
+  right: 50px;
+  height: 70px;
+}
+@media screen and (min-width: 992px) {
+  #hero .carousel .illustration .r-b {
+    right: 100px;
+    height: 100px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #hero .carousel .illustration .r-b {
+    bottom: 100px;
+    right: 200px;
+    height: initial;
+  }
 }
 #hero .carousel .wrapper {
   position: absolute;
@@ -254,11 +459,25 @@ header > .container .header__right nav ul li:hover::before {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  width: 60%;
+}
+@media screen and (min-width: 768px) {
+  #hero .carousel .wrapper > .container .center .centre-top {
+    width: 70%;
+  }
+}
+@media screen and (min-width: 992px) {
+  #hero .carousel .wrapper > .container .center .centre-top {
+    width: 60%;
+  }
 }
 #hero .carousel .wrapper > .container .center .centre-top p {
-  font-size: 20px;
+  font-size: 17px;
   margin-bottom: 50px;
+}
+@media screen and (min-width: 768px) {
+  #hero .carousel .wrapper > .container .center .centre-top p {
+    font-size: 20px;
+  }
 }
 #hero .carousel .wrapper > .container .center .bullet__wrapper {
   text-align: center;
@@ -280,20 +499,32 @@ header > .container .header__right nav ul li:hover::before {
   width: 10px;
 }
 #hero .carousel .wrapper > .container .arrow {
-  display: inline-block;
-  font-size: 16px;
-  background-color: #E1C0B0;
-  height: 40px;
-  width: 40px;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #fff;
-  transition: all 0.5s;
+  flex-shrink: 0;
+  display: none;
 }
-#hero .carousel .wrapper > .container .arrow:hover {
-  background-color: #C0E1CF;
+@media screen and (min-width: 768px) {
+  #hero .carousel .wrapper > .container .arrow {
+    display: inline-block;
+    font-size: 16px;
+    background-color: #E1C0B0;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    transition: all 0.5s;
+  }
+  #hero .carousel .wrapper > .container .arrow:hover {
+    background-color: #C0E1CF;
+  }
+}
+#hero .carousel .wrapper > .container .arrow--l {
+  margin-right: 20px;
+}
+#hero .carousel .wrapper > .container .arrow--r {
+  margin-left: 20px;
 }
 
 section {
@@ -349,14 +580,18 @@ section {
   position: relative;
   margin-top: 70px;
 }
-#process .steps {
-  display: flex;
-  justify-content: space-between;
+@media screen and (min-width: 992px) {
+  #process .steps {
+    display: flex;
+    justify-content: space-between;
+  }
 }
-#process .steps .process__step {
-  flex-basis: calc( (100% - (32px * 3 ) ) / 4);
-  display: flex;
-  flex-wrap: wrap;
+@media screen and (min-width: 992px) {
+  #process .steps .process__step {
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: calc( (100% - (32px * 3 ) ) / 4);
+  }
 }
 #process .steps .process__step .process__icon {
   height: 160px;

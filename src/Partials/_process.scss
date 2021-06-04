@@ -5,13 +5,20 @@
     }
 
     .steps {
-        display: flex;
-        justify-content: space-between;
+
+        @include screen(l) {
+            display: flex;
+            justify-content: space-between;
+        }
 
         .process__step {
-            flex-basis: calc( (100% - (32px * 3 ) ) / 4);
-            display: flex;
-            flex-wrap: wrap;
+
+            @include screen(l) {
+                display: flex;
+                flex-wrap: wrap;    
+                flex-basis: calc( (100% - (32px * 3 ) ) / 4);
+            }
+            
             
             .process__icon {
                 height: 160px;

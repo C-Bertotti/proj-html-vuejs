@@ -12,20 +12,6 @@ html {
     background-color: rgba($color: red, $alpha: .2);
 }
 
-.container {
-    width: 95%;
-    margin: 0 auto;
-  
-    //responsive
-    &--s {
-        max-width: 1170px;
-    }
-  
-    &--m {
-        max-width: 1300px;
-    }
-}
-
 ul {
     list-style: none;
 }
@@ -33,3 +19,106 @@ ul {
 .centered {
     text-align: center;
 }
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+
+    @include screen(s) {
+        width: 95%;
+    }
+  
+    &--s {
+
+        //responsive
+        /*
+        @include screen(s) {
+            max-width: 500px;
+        }
+        @include screen(m) {
+            width: 80%;
+            max-width: 720px;
+        }
+        @include screen(l) {
+            max-width: 810px;
+        }
+        @include screen(xl) {
+            max-width: 745px;
+        }
+        */
+        @include screen(xxl) {
+            max-width: 1170px;
+        }
+        
+    }
+  
+    &--m {
+        max-width: 1300px;
+    }
+}
+
+/*
+.container {
+    width: 85%;
+    margin: 0 auto;
+  
+    //responsive
+    &--s {
+      @include screen(small) {
+        max-width: 500px;
+      }
+      @include screen(med) {
+        width: 80%;
+        max-width: 720px;
+      }
+      @include screen(lg) {
+        max-width: 810px;
+      }
+      @include screen(xlg) {
+        max-width: 745px;
+      }
+      @include screen(xxlg) {
+        max-width: 800px;
+      }
+    }
+  
+    &--l {
+      @include screen(small) {
+        max-width: 560px;
+      }
+      @include screen(med) {
+        width: 80%;
+        max-width: 730px;
+      }
+      @include screen(lg) {
+        max-width: 890px;
+      }
+      @include screen(xlg) {
+        max-width: 1110px;
+      }
+      @include screen(xxlg) {
+        max-width: 1170px;
+      }
+    }
+  
+    &--xl {
+      @include screen(small) {
+        max-width: 650px;
+      }
+      @include screen(med) {
+        width: 85%;
+        max-width: 800px;
+      }
+      @include screen(lg) {
+        max-width: 950px;
+      }
+      @include screen(xlg) {
+        max-width: 1100px;
+      }
+      @include screen(xxlg) {
+        max-width: 1200px;
+      }
+    }
+  }
+
+*/

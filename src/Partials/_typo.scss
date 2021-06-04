@@ -21,10 +21,14 @@ a {
 
 h2 {
     font-family: $secondaryFont;
-    font-size: $headingXL;
+    font-size: 60px;
     font-weight: $fontLight;
     line-height: 1;
     margin-bottom: 40px;
+
+    @include screen(l) {
+        font-size: $headingXL;
+    }
 
 }
 

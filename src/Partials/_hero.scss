@@ -1,6 +1,6 @@
 #hero {
     height: 600px;
-
+    
     .carousel {
         height: 100%;
         position: relative;
@@ -14,38 +14,129 @@
             }
     
             .l-t{
-                bottom: 460px;
-                right: 810px;
+                bottom: 510px;
+                right: 510px;
+
+                //responsive
+                @include screen (m) {
+                    bottom: 460px;
+                    right: 810px;
+                }
             }
             .l-c{
-                bottom: 250px;
-                right: 890px;
+                bottom: 105px;
+                right: 420px;
+                height: 30px;
+
+                //responsive
+                @include screen (l) {
+                    bottom: 250px;
+                    right: 890px; 
+                    height: initial;   
+                }
             }
+
             .l-b{
-                bottom: 107px;
-                right: 860px;
+                bottom: 60px;
+                right: 355px;
+                height: 80px;
+
+                @include screen (l) {
+                    bottom: 107px;
+                    right: 860px; 
+                    height: initial;   
+                }
             }
             .main{
-                bottom: 100px;
-                height: 370px;
-                &--left {
-                    right: 530px;
+                bottom: 60px;
+                height: 180px;
+
+                //responsive
+                @include screen (m) {
+                    height: 220px;    
                 }
+                @include screen (l) {
+                    height: 300px;    
+                }
+                @include screen (xxl) {
+                    bottom: 100px;
+                    height: 370px;    
+                }
+
+                &--left {
+                    right: 220px;
+
+                    //responsive
+                    @include screen (m) {
+                        right: 250px;
+                    }
+                    @include screen (m) {
+                        right: 330px;
+                    }
+                    @include screen (xl) {
+                        right: 530px;
+                    }
+                }
+
                 &--right {
-                    right: 260px;
+                    right: 100px;
+
+                    //responsive
+                    @include screen (m) {
+                        right: 100px;
+                    }
+                    @include screen (m) {
+                        right: 130px;
+                    }
+                    
+                    @include screen (xl) {
+                        right: 260px;
+                    }
                 }
             }
             .r-t{
-                bottom: 470px;
-                right: 300px;
+                bottom: 450px;
+                right: 60px;
+                height: 50px;
+
+                //responsive
+                @include screen (l) {
+                    bottom: 470px;
+                    right: 300px;
+                    height: initial;   
+                }
             }
+
             .r-c{
-                bottom: 380px;
-                right: 250px;
+                bottom: 200px;
+                right: 100px;
+                height: 30px;   
+
+                //responsive
+                @include screen (l) {
+                    bottom: 380px;
+                    right: 250px;
+                    height: initial;   
+                }
             }
+
             .r-b{
-                bottom: 100px;
-                right: 200px;
+                bottom: 60px;
+                right: 50px;
+                height: 70px;
+
+                //responsive
+                @include screen (l) {
+                    right: 100px;
+                    height: 100px;
+
+                }
+                @include screen (xl) {
+                    bottom: 100px;
+                    right: 200px;
+                    height: initial;
+
+                }
             }
         }
 
@@ -71,11 +162,21 @@
                         display: flex;
                         flex-wrap: wrap;
                         align-items: center;
-                        width: 60%;
+
+                        @include screen(m) {
+                            width: 70%;
+                        }
+                        @include screen(l) {
+                            width: 60%;
+                        }
                         
                         p {
-                            font-size: $pL;
+                            font-size: 17px;
                             margin-bottom: 50px;
+
+                            @include screen (m) {
+                                font-size: $pL;
+                            }
                         }
                     }
 
@@ -103,21 +204,36 @@
                 }
 
                 .arrow {
-                    display: inline-block;
-                    font-size: $pM;
-                    background-color: $secondaryColorDark;
-                    height: 40px;
-                    width: 40px;
-                    border-radius: 50%;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    color: #fff;
-                    transition: all .5s;
+                    flex-shrink: 0;
+                    display: none;
 
-                    &:hover {
-                        background-color: $primaryColorDark;
+                    @include screen(m) {
+                        display: inline-block;
+                        font-size: $pM;
+                        background-color: $secondaryColorDark;
+                        height: 40px;
+                        width: 40px;
+                        border-radius: 50%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        color: #fff;
+                        transition: all .5s;
+
+                        &:hover {
+                            background-color: $primaryColorDark;
+                        }
                     }
+
+                    
+                }
+
+                .arrow--l {
+                    margin-right: 20px
+                }
+
+                .arrow--r {
+                    margin-left: 20px
                 }
             }
             

@@ -10,12 +10,20 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "laravel-mix": "^6.0.16",
+    "laravel-mix": "^6.0.19",
     "postcss": "^8.2.10",
     "sass": "^1.32.10",
     "sass-loader": "^11.0.1"
   },
   "dependencies": {
     "animejs": "^3.2.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/C-Bertotti/proj-html-vuejs.git"
+  },
+  "bugs": {
+    "url": "https://github.com/C-Bertotti/proj-html-vuejs/issues"
+  },
+  "homepage": "https://github.com/C-Bertotti/proj-html-vuejs#readme"
 }
