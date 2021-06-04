@@ -32,10 +32,15 @@ h2 {
 
 h3 {
   font-family: "Mulish", sans-serif;
-  font-size: 65px;
+  font-size: 45px;
   font-weight: 400;
   text-align: center;
   margin-bottom: 40px;
+}
+@media screen and (min-width: 768px) {
+  h3 {
+    font-size: 65px;
+  }
 }
 
 h2 span, h3 span {
@@ -155,21 +160,7 @@ ul {
   }
 }
 .container--s {
-  /*
-  @include screen(s) {
-      max-width: 500px;
-  }
-  @include screen(m) {
-      width: 80%;
-      max-width: 720px;
-  }
-  @include screen(l) {
-      max-width: 810px;
-  }
-  @include screen(xl) {
-      max-width: 745px;
-  }
-  */
+  width: 85%;
 }
 @media screen and (min-width: 1400px) {
   .container--s {
@@ -754,11 +745,15 @@ section {
     justify-content: space-between;
   }
 }
+#process .steps .process__step {
+  padding: 0 50px;
+}
 @media screen and (min-width: 992px) {
   #process .steps .process__step {
     display: flex;
     flex-wrap: wrap;
     flex-basis: calc( (100% - (32px * 3 ) ) / 4);
+    padding: inherit;
   }
 }
 #process .steps .process__step .process__icon {
@@ -783,13 +778,27 @@ section {
 #process .steps .process__step:hover .process__icon {
   transform: scale(1.1);
 }
+#process .steps .process__step:not(:last-child) {
+  margin-bottom: 50px;
+}
+@media screen and (min-width: 992px) {
+  #process .steps .process__step:not(:last-child) {
+    margin-bottom: inherit;
+  }
+}
 #process #line-process {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 90%;
-  z-index: -2;
+  display: none;
+}
+@media screen and (min-width: 992px) {
+  #process #line-process {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    z-index: -2;
+  }
 }
 
 #contact {

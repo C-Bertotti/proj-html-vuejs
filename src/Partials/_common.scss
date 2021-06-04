@@ -29,26 +29,11 @@ ul {
     }
   
     &--s {
+      width: 85%;
 
-        //responsive
-        /*
-        @include screen(s) {
-            max-width: 500px;
-        }
-        @include screen(m) {
-            width: 80%;
-            max-width: 720px;
-        }
-        @include screen(l) {
-            max-width: 810px;
-        }
-        @include screen(xl) {
-            max-width: 745px;
-        }
-        */
-        @include screen(xxl) {
-            max-width: 1170px;
-        }
+      @include screen(xxl) {
+        max-width: 1170px;
+      }
         
     }
   

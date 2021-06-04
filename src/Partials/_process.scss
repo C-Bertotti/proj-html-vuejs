@@ -5,20 +5,20 @@
     }
 
     .steps {
-
         @include screen(l) {
             display: flex;
             justify-content: space-between;
         }
 
         .process__step {
+            padding: 0 50px;
 
             @include screen(l) {
                 display: flex;
                 flex-wrap: wrap;    
                 flex-basis: calc( (100% - (32px * 3 ) ) / 4);
+                padding: inherit;
             }
-            
             
             .process__icon {
                 height: 160px;
@@ -46,14 +46,29 @@
                 transform: scale(1.1);
             }
         }
+
+        .process__step:not(:last-child) {
+            margin-bottom: 50px;
+
+            //responsive 
+            @include screen(l) {
+                margin-bottom: inherit;
+            }
+        }
     }
 
     #line-process {
-        position: absolute;
-        top: 0;    
-        left: 50%;
-        transform: translateX(-50%);
-        width: 90%;
-        z-index: -2;
+        display: none;
+
+        //responsive 
+        @include screen (l) {
+            display: block;
+            position: absolute;
+            top: 0;    
+            left: 50%;
+            transform: translateX(-50%);
+            width: 90%;
+            z-index: -2;
+        }
     }
 }

@@ -34,10 +34,15 @@ h2 {
 
 h3 {
     font-family: $secondaryFont;
-    font-size: $headingL;
+    font-size: 45px;
     font-weight: $fontReg;
     text-align: center;
     margin-bottom: 40px;
+
+    //responsive
+    @include screen (m) {
+        font-size: $headingL;
+    }
 }
 
 h2, h3 {
