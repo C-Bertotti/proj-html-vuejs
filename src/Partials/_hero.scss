@@ -19,6 +19,10 @@
 
                 //responsive
                 @include screen (m) {
+                    bottom: 510px;
+                    right: 680px;
+                }
+                @include screen (l) {
                     bottom: 460px;
                     right: 810px;
                 }
@@ -29,6 +33,12 @@
                 height: 30px;
 
                 //responsive
+                @include screen (m) {
+                    bottom: 240px;
+                    right: 415px; 
+                    height: 35px;   
+                }
+
                 @include screen (l) {
                     bottom: 250px;
                     right: 890px; 
@@ -41,10 +51,14 @@
                 right: 355px;
                 height: 80px;
 
+                @include screen (m) {
+                    right: 420px; 
+                    height: initial;   
+                }
+
                 @include screen (l) {
                     bottom: 107px;
                     right: 860px; 
-                    height: initial;   
                 }
             }
             .main{
@@ -70,7 +84,7 @@
                     @include screen (m) {
                         right: 250px;
                     }
-                    @include screen (m) {
+                    @include screen (l) {
                         right: 330px;
                     }
                     @include screen (xl) {
@@ -85,10 +99,9 @@
                     @include screen (m) {
                         right: 100px;
                     }
-                    @include screen (m) {
+                    @include screen (l) {
                         right: 130px;
                     }
-                    
                     @include screen (xl) {
                         right: 260px;
                     }
@@ -100,10 +113,14 @@
                 height: 50px;
 
                 //responsive
+                @include screen (m) {
+                    bottom: 280px;
+                    right: 90px;
+                    height: initial;   
+                }
                 @include screen (l) {
                     bottom: 470px;
                     right: 300px;
-                    height: initial;   
                 }
             }
 
@@ -126,10 +143,12 @@
                 height: 70px;
 
                 //responsive
+                @include screen (m) {
+                    height: 85px;
+                }
                 @include screen (l) {
                     right: 100px;
                     height: 100px;
-
                 }
                 @include screen (xl) {
                     bottom: 100px;

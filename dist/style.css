@@ -311,6 +311,12 @@ header > .container .header__right button {
 }
 @media screen and (min-width: 768px) {
   #hero .carousel .illustration .l-t {
+    bottom: 510px;
+    right: 680px;
+  }
+}
+@media screen and (min-width: 992px) {
+  #hero .carousel .illustration .l-t {
     bottom: 460px;
     right: 810px;
   }
@@ -319,6 +325,13 @@ header > .container .header__right button {
   bottom: 105px;
   right: 420px;
   height: 30px;
+}
+@media screen and (min-width: 768px) {
+  #hero .carousel .illustration .l-c {
+    bottom: 240px;
+    right: 415px;
+    height: 35px;
+  }
 }
 @media screen and (min-width: 992px) {
   #hero .carousel .illustration .l-c {
@@ -332,11 +345,16 @@ header > .container .header__right button {
   right: 355px;
   height: 80px;
 }
+@media screen and (min-width: 768px) {
+  #hero .carousel .illustration .l-b {
+    right: 420px;
+    height: initial;
+  }
+}
 @media screen and (min-width: 992px) {
   #hero .carousel .illustration .l-b {
     bottom: 107px;
     right: 860px;
-    height: initial;
   }
 }
 #hero .carousel .illustration .main {
@@ -367,7 +385,7 @@ header > .container .header__right button {
     right: 250px;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 992px) {
   #hero .carousel .illustration .main--left {
     right: 330px;
   }
@@ -385,7 +403,7 @@ header > .container .header__right button {
     right: 100px;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 992px) {
   #hero .carousel .illustration .main--right {
     right: 130px;
   }
@@ -400,11 +418,17 @@ header > .container .header__right button {
   right: 60px;
   height: 50px;
 }
+@media screen and (min-width: 768px) {
+  #hero .carousel .illustration .r-t {
+    bottom: 280px;
+    right: 90px;
+    height: initial;
+  }
+}
 @media screen and (min-width: 992px) {
   #hero .carousel .illustration .r-t {
     bottom: 470px;
     right: 300px;
-    height: initial;
   }
 }
 #hero .carousel .illustration .r-c {
@@ -423,6 +447,11 @@ header > .container .header__right button {
   bottom: 60px;
   right: 50px;
   height: 70px;
+}
+@media screen and (min-width: 768px) {
+  #hero .carousel .illustration .r-b {
+    height: 85px;
+  }
 }
 @media screen and (min-width: 992px) {
   #hero .carousel .illustration .r-b {
