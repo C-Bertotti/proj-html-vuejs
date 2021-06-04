@@ -340,8 +340,8 @@ header > .container .header__right button {
 @media screen and (min-width: 1400px) {
   #hero .carousel .illustration .l-t {
     bottom: 460px;
-    right: 810px;
-    left: inherit;
+    right: 780px;
+    left: initial;
   }
 }
 #hero .carousel .illustration .l-c {
@@ -372,7 +372,7 @@ header > .container .header__right button {
 @media screen and (min-width: 1400px) {
   #hero .carousel .illustration .l-c {
     bottom: 250px;
-    right: 890px;
+    right: 860px;
   }
 }
 #hero .carousel .illustration .l-b {
@@ -401,7 +401,7 @@ header > .container .header__right button {
 @media screen and (min-width: 1400px) {
   #hero .carousel .illustration .l-b {
     bottom: 107px;
-    right: 860px;
+    right: 800px;
   }
 }
 #hero .carousel .illustration .main {
@@ -444,7 +444,7 @@ header > .container .header__right button {
 }
 @media screen and (min-width: 1400px) {
   #hero .carousel .illustration .main--left {
-    right: 530px;
+    right: 480px;
   }
 }
 #hero .carousel .illustration .main--right {
@@ -467,7 +467,7 @@ header > .container .header__right button {
 }
 @media screen and (min-width: 1400px) {
   #hero .carousel .illustration .main--right {
-    right: 260px;
+    right: 200px;
   }
 }
 #hero .carousel .illustration .r-t {
@@ -502,7 +502,7 @@ header > .container .header__right button {
 @media screen and (min-width: 1400px) {
   #hero .carousel .illustration .r-t {
     bottom: 470px;
-    right: 300px;
+    right: 250px;
   }
 }
 #hero .carousel .illustration .r-c {
@@ -526,7 +526,7 @@ header > .container .header__right button {
 @media screen and (min-width: 1400px) {
   #hero .carousel .illustration .r-c {
     bottom: 380px;
-    right: 250px;
+    right: 180px;
   }
 }
 #hero .carousel .illustration .r-b {
@@ -555,7 +555,7 @@ header > .container .header__right button {
 @media screen and (min-width: 1400px) {
   #hero .carousel .illustration .r-b {
     bottom: 100px;
-    right: 200px;
+    right: 100px;
     height: initial;
   }
 }

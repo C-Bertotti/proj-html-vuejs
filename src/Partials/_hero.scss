@@ -39,8 +39,8 @@
                 }
                 @include screen (xxl) {
                     bottom: 460px;
-                    right: 810px;
-                    left: inherit;
+                    right: 780px;
+                    left: initial;
                 }
             }
             .l-c{
@@ -65,7 +65,7 @@
                 }
                 @include screen (xxl) {
                     bottom: 250px;
-                    right: 890px; 
+                    right: 860px; 
                 }
             }
 
@@ -88,7 +88,7 @@
                 }
                 @include screen (xxl) {
                     bottom: 107px;
-                    right: 860px; 
+                    right: 800px; 
                 }
             }
             .main{
@@ -121,7 +121,7 @@
                         right: 370px;
                     }
                     @include screen (xxl) {
-                        right: 530px;
+                        right: 480px;
                     }
                 }
 
@@ -139,7 +139,7 @@
                         right: 160px;
                     }
                     @include screen (xxl) {
-                        right: 260px;
+                        right: 200px;
                     }
                 }
             }
@@ -167,7 +167,7 @@
                 }
                 @include screen (xxl) {
                     bottom: 470px;
-                    right: 300px;
+                    right: 250px;
                 }
             }
 
@@ -188,7 +188,7 @@
                 }
                 @include screen (xxl) {
                     bottom: 380px;
-                    right: 250px;
+                    right: 180px;
                 }
             }
 
@@ -209,13 +209,11 @@
                     bottom: 80px;
                     right: 80px; 
                     height: 100px;
-
                 }
                 @include screen (xxl) {
                     bottom: 100px;
-                    right: 200px;
+                    right: 100px;
                     height: initial;
-
                 }
             }
         }
